@@ -1,11 +1,7 @@
 import React from "react";
-
+import { Footer } from "./Footer";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">UniConnect Project</header>
-    </div>
-  );
+  return <Footer />;
 }
 
 export default App;
