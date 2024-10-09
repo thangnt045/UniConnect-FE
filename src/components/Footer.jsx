@@ -2,7 +2,7 @@ import React from "react";
 import { GetImage } from "../utils/GetImage";
 import "../styles/Footer.css";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">

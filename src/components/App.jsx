@@ -1,12 +1,12 @@
 import React from "react";
-import EventListSection from "./EventListSection";
+import Home from "../pages/Home";
 
 function App() {
   return (
     <>
-      <EventListSection />
+      <Home />
     </>
-  )
+  );
 }
 
 export default App;
