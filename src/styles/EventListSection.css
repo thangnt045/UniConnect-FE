@@ -1,0 +1,80 @@
+.event-list-section {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+  
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  flex: 1;
+}
+  
+.categories {
+  display: flex;
+  flex: 3;
+  gap: 10px;
+  margin-left: 20px;
+}
+  
+.categories button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  transition: 0.2s;
+}
+
+.categories button:hover {
+  background: #ffbdbd;
+  transform: translateY(-5px);
+}
+  
+select {
+  padding: 5px;
+  margin: 0 10px 0 10px;
+  color: white;
+  background: #ff8d8d;
+}
+
+.pagination-controls {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+  
+.pagination-controls button { 
+  background-color: #ff8d8d;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  height: 20em;
+}
+  
+.pagination-controls button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+  
+.pagination-controls span {
+  font-size: 16px;
+}
+
+.event-list-container {
+  display: flex;
+  margin: 20px 0px 20px 0px;
+}
