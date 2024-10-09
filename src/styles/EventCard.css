@@ -1,36 +1,36 @@
 .event-card {
-    width: 35rcap;
-    background: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-    margin: auto;
+  width: 27em;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  margin: auto;
 }
-  
+
 .event-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-  
+
 .image-placeholder {
-    height: 150px;
-    background: #ddd;
+  height: 150px;
+  background: #ddd;
 }
-  
+
 .event-info {
-    background: #ff8d8d;
-    padding: 10px;
-    text-align: center;
+  background: #ff8d8d;
+  padding: 10px;
+  text-align: center;
 }
-  
+
 .view-details-button {
-    background: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
+  background: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .view-details-button:hover {
-    background: #e7e7e7;
+  background: #e7e7e7;
 }

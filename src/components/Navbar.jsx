@@ -1,11 +1,16 @@
 import React from "react";
 import "../styles/Navbar.css";
+import { GetImage } from "../utils/GetImage";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="" alt="Logo" />
+        <GetImage
+          image={"app_icon"}
+          alt="app_logo"
+          size={{ width: 30, height: 20 }}
+        />
       </div>
       <ul className="navbar-links">
         <li>
