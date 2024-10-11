@@ -1,0 +1,50 @@
+/* EventBanner.css */
+
+.event-banner {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.top-banner .event-banner-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.event-banner-title {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.description-banner .event-banner-description {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .top-banner .event-banner-image {
+    height: 200px;
+  }
+
+  .event-banner-title {
+    font-size: 1.5rem;
+  }
+
+  .description-banner .event-banner-description {
+    padding: 15px;
+  }
+}

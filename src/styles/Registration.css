@@ -1,41 +1,41 @@
+/* Registration.css */
+
+/* Specific to the Registration component */
 .registration-container {
-    background-color: #000; 
-    color: #fff; 
-    padding: 20px;
-    border-radius: 8px; 
-    text-align: center; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    max-width: 200px; 
-    margin: 20px auto; 
+  color: #fff;
+  padding: 20px;
+  border-radius: 2em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  margin: 20px auto;
 }
 
-h3 {
-    margin: 0 0 10px; 
-    font-size: 20px; 
+.registration-container h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
 }
 
-
-p {
-    margin: 10px 0; 
-    font-size: 16px; 
-    padding: 10px; 
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 1px solid #fff;
-    border-radius: 5px;
+.registration-container p {
+  margin: 10px 0;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 
-
-.register-button {
-    background-color: #d9534f; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    font-size: 18px; 
-    transition: background-color 0.3s; 
+.registration-container .register-button {
+  background-color: #b72b27;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
 }
 
-.register-button:hover {
-    background-color: #c9302c;
+.registration-container .register-button:hover {
+  background-color: #c9302c;
 }
