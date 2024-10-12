@@ -13,7 +13,7 @@ const Navbar = () => {
         />
       </div>
       <ul className="navbar-links">
-        <li>
+        <li id="to-home">
           <a href="#1">Trang Chủ</a>
         </li>
         <li>

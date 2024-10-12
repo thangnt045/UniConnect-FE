@@ -2,8 +2,8 @@ export function GetImage({ image, size }) {
   return (
     <div>
       <img
-        src={getImageFile(image)}
-        alt="image"
+        src={getImageFile({image})}
+        alt= "image"
         width={size.width}
         height={size.height}
         hspace={10}

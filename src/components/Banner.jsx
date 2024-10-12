@@ -19,7 +19,7 @@ const BannerComponent = () => {
             <p>Thời gian: 14:00 30/09/2024</p>
             <p>Toà G, CS3~Phòng G.9.21</p>
           </div>
-          <button className="banner-button">See Events</button>
+          <button className="banner-button" id="banner-button">See Events</button>
         </div>
       </div>
     </div>
