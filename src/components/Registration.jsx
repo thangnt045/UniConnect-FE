@@ -1,6 +1,6 @@
 // Registration.jsx
 import React from "react";
-import events from "../data/eventData"; // Ensure the path is correct
+import events from "../data/eventData";
 import "../styles/Registration.css";
 
 const Registration = ({ eventId }) => {
