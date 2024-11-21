@@ -1,12 +1,15 @@
 import React from "react";
 import Home from "../pages/Home";
 import DetailedEvent from "../pages/DetailedEvent";
+import Registration from "./Registration";
 
 function App() {
   return (
     <div>
       <div>
-        <DetailedEvent eventId={5} />
+        {/* <Home /> */}
+        <DetailedEvent eventId={4} />
+        {/* <Registration eventId="1" /> */}
       </div>
     </div>
   );
