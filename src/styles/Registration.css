@@ -1,7 +1,7 @@
 .registration-container {
   position: absolute; /* Fix the position */
   top: 50%;
-  right: 5%; /* Keep it on the right */
+  right: 2%; /* Keep it on the right */
   transform: translateY(-50%);
   color: #fff;
   padding: 20px;
