@@ -1,14 +1,20 @@
-/* Registration.css */
-
-/* Specific to the Registration component */
 .registration-container {
+  position: absolute; /* Fix the position */
+  top: 50%;
+  right: 2%; /* Keep it on the right */
+  transform: translateY(-50%);
   color: #fff;
   padding: 20px;
   border-radius: 2em;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 200px;
-  margin: 20px auto;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Semi-transparent background for better readability */
 }
 
 .registration-container h3 {
@@ -38,4 +44,19 @@
 
 .registration-container .register-button:hover {
   background-color: #c9302c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .registration-container {
+    top: 15%; /* Adjust for smaller screens */
+    right: 5%;
+    max-width: 180px;
+    padding: 15px;
+  }
+
+  .registration-container .register-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
 }

@@ -2,7 +2,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import EventBanner from "../components/EventBanner";
-import Registration from "../components/Registration";
 import Footer from "../components/Footer";
 
 const DetailedEvent = ({ eventId }) => {

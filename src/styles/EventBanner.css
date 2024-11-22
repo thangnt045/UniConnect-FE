@@ -1,50 +1,42 @@
-/* EventBanner.css */
-
 .event-banner {
+  position: relative; /* Set a context for absolute positioning */
   margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .top-banner .event-banner-image {
-  height: 250px;
+  position: relative; /* Context for Registration */
+  height: 350px; /* Slightly increased height */
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  padding: 20px; /* Added padding for spacing */
+  text-align: left;
 }
 
 .event-banner-title {
+  position: relative; /* Keep title in place */
+  z-index: 2; /* Ensure it's above other elements */
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 2rem;
+  font-size: 2.5rem; /* Slightly increased size */
   font-weight: bold;
 }
 
-.description-banner .event-banner-description {
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .top-banner .event-banner-image {
-    height: 200px;
+    height: 250px;
+    justify-content: center; /* Center content on smaller screens */
+    padding: 10px;
   }
 
   .event-banner-title {
-    font-size: 1.5rem;
-  }
-
-  .description-banner .event-banner-description {
-    padding: 15px;
+    font-size: 1.8rem;
   }
 }

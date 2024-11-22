@@ -26,7 +26,12 @@ const Navbar = () => {
           <a href="#4">Sự Kiện Của Tôi</a>
         </li>
       </ul>
-      <div className="navbar-signin">
+      <div className="navbar-search-signin">
+        <input
+          type="text"
+          className="navbar-search"
+          placeholder="Tìm kiếm sự kiện..."
+        />
         <button className="signin-button">Đăng Nhập</button>
       </div>
     </nav>
