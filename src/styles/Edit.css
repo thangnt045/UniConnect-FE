@@ -1,0 +1,68 @@
+/* Edit.css */
+
+/* Container for the edit event form */
+.edit-event-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form group for each input field */
+.edit-event-form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for labels with red color */
+.edit-event-form-group label {
+  font-weight: bold;
+  color: red;  /* Change label color to red */
+  margin-bottom: 8px;
+}
+
+/* Styling for input and textarea fields */
+.edit-event-form-group input,
+.edit-event-form-group textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Prevent resizing for textareas */
+.edit-event-form-group textarea {
+  resize: none;
+}
+
+/* Container for form actions (buttons) */
+.edit-event-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Styling for buttons */
+.edit-event-form-actions button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for "Lưu" button (Save) with green color */
+.edit-event-form-actions .edit-event-save-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Styling for "Hủy" button (Cancel) with red color */
+.edit-event-form-actions .edit-event-cancel-button {
+  background-color: #f44336;
+  color: #fff;
+}

@@ -1,0 +1,35 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Đêm Nhạc Giao Thừa",
+      "datetime": "2024-12-01",
+      "category": "Technology",
+      "location": "Trịnh Công Sơn",
+      "tickets": 100,
+      "description": "Sự kiện công nghệ lớn nhất năm, với sự tham gia của các chuyên gia trong ngành.",
+      "image": "blob:http://localhost:3000/792cb571-bdc9-47b2-8eca-75831f7dbe50",
+      "ticketLeft": "20/2"
+    },
+    {
+      "id": "2",
+      "title": "Sự kiện Giáo dục",
+      "datetime": "2024-12-05",
+      "category": "Education",
+      "location": "TP Hồ Chí Minh",
+      "tickets": 200,
+      "description": "Hội thảo về giáo dục và đào tạo cho thế hệ tương lai.",
+      "image": "https://example.com/image2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Sự kiện Kinh doanh",
+      "datetime": "2024-12-10",
+      "category": "Business",
+      "location": "Đà Nẵng",
+      "tickets": 50,
+      "description": "Kết nối doanh nghiệp và các nhà đầu tư tiềm năng.",
+      "image": "https://example.com/image3.jpg"
+    }
+  ]
+}
