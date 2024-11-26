@@ -8,7 +8,7 @@ function App() {
     <div>
       <div>
         {/* <Home /> */}
-        <DetailedEvent eventId={4} />
+        <DetailedEvent eventId={8} />
         {/* <Registration eventId="1" /> */}
       </div>
     </div>
