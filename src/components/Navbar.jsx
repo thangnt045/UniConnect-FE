@@ -30,7 +30,7 @@ const Navbar = () => {
     dispatch(setSelectedEvent(event)); // Set selected event in Redux
     setShowSuggestions(false); // Hide dropdown
     clearSearch(); // Optionally clear search
-    navigate(`/event/${event.id}`); // Navigate to event detail page
+    navigate(`/events/${event.id}`); // Navigate to event detail page
   };
 
   return (
@@ -44,16 +44,16 @@ const Navbar = () => {
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="#1">Trang Chủ</a>
+          <a href="/">Trang Chủ</a>
         </li>
         <li>
-          <a href="#2">Hội Nghị Sự Kiện</a>
+          <a href="#">Hội Nghị Sự Kiện</a>
         </li>
         <li>
-          <a href="#3">Lịch Sự Kiện</a>
+          <a href="#">Lịch Sự Kiện</a>
         </li>
         <li>
-          <a href="#4">Sự Kiện Của Tôi</a>
+          <a href="/events">Sự Kiện Của Tôi</a>
         </li>
       </ul>
       <div className="navbar-search">

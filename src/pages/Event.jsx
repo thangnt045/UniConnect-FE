@@ -4,6 +4,8 @@ import EventsDataList from "../components/EventsDataList";
 import EditEvent from "../components/EditEvent";
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Sidebar from "../components/Sidebar";
+import "../styles/Event.css"
 
 const Event = () => {
   const [events, setEvents] = useState([]);
@@ -32,15 +34,19 @@ const Event = () => {
     <div>
       <Navbar/>
       
-      {editingEvent ? (
-        <EditEvent
-          event={editingEvent}
-          onSave={handleSave}
-          onCancel={() => setEditingEvent(null)}
-        />
-      ) : (
-        <EventsDataList events={events} onEdit={handleEdit} />
-      )}
+      <div className="dashboard-content">
+        <Sidebar className="sidebar"/>
+        {editingEvent ? (
+          <EditEvent
+            event={editingEvent}
+            onSave={handleSave}
+            onCancel={() => setEditingEvent(null)}
+            className="edit-event"
+          />
+        ) : (
+          <EventsDataList className="edit-event" events={events} onEdit={handleEdit} />
+        )}
+      </div>
 
       <Footer/>
     </div>

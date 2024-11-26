@@ -5,7 +5,7 @@ const EditEvent = ({ event, onSave, onCancel }) => {
   const [title, setTitle] = useState(event.title);
   const [location, setLocation] = useState(event.location);
   const [datetime, setDatetime] = useState(event.datetime);
-  const [ticketLeft, setTicketLeft] = useState(event.ticketLeft);
+  const [ticketsLeft, setTicketsLeft] = useState(event.ticketsLeft);
   const [description, setDescription] = useState(event.description);
 
   const handleSave = () => {
@@ -14,7 +14,7 @@ const EditEvent = ({ event, onSave, onCancel }) => {
       title,
       location,
       datetime,
-      ticketLeft,
+      ticketsLeft,
       description,
     });
   };
@@ -52,12 +52,12 @@ const EditEvent = ({ event, onSave, onCancel }) => {
         />
       </div>
       <div className="edit-event-form-group">
-        <label htmlFor="ticketLeft">Số Vé</label>
+        <label htmlFor="ticketsLeft">Số Vé</label>
         <input
-          type="text"
-          id="ticketLeft"
-          value={ticketLeft}
-          onChange={(e) => setTicketLeft(e.target.value)}
+          type="number"
+          id="ticketsLeft"
+          value={ticketsLeft}
+          onChange={(e) => setTicketsLeft(e.target.value)}
           placeholder="Tickets Left"
         />
       </div>

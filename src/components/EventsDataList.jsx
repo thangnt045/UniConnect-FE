@@ -8,7 +8,7 @@ const EventsDataList = ({ events, onEdit }) => {
           <h3>{event.title}</h3>
           <p>{event.location}</p>
           <p>{event.datetime}</p>
-          <p>Tickets Left: {event.ticketLeft}</p>
+          <p>Tickets Left: {event.ticketsLeft}</p>
           <p>{event.description}</p>
           <button onClick={() => onEdit(event)}>Edit</button>
         </div>

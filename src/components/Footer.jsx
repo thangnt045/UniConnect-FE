@@ -4,7 +4,7 @@ import "../styles/Footer.css";
 
 export default function Footer() {
   return (
-    <footer style={{ marginTop: "12.5em" }} className="footer">
+    <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
           <img

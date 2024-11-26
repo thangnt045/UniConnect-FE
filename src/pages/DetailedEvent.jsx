@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import EventBanner from "../components/EventBanner";
 import Footer from "../components/Footer";
-import DetailedEventPage from "../styles/DetailedEventPage.css";
+import "../styles/DetailedEventPage.css";
 
 const DetailedEvent = () => {
   const { id } = useParams(); // Get the event ID from the URL
@@ -13,9 +13,9 @@ const DetailedEvent = () => {
 
   // Find the event using the URL ID if `selectedEvent` is not set
   const event =
-    selectedEvent && selectedEvent.id === parseInt(id)
+    selectedEvent && selectedEvent.id === id
       ? selectedEvent
-      : allEvents.find((event) => event.id === parseInt(id));
+      : allEvents.find((event) => event.id === id);
 
   // Display a fallback message if the event is not found
   if (!event) {

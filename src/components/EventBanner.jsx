@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { fetchEvents } from "../fetchAPI/api";
 import "../styles/EventBanner.css";
 import Registration from "./Registration";
 
@@ -8,24 +9,33 @@ const EventBanner = ({ eventId, isTop }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/data/eventData.json") // Adjust the path as needed for your project structure
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        const foundEvent = data.events.find(
-          (e) => e.id === parseInt(eventId, 10)
-        );
-        setEvent(foundEvent);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
+    // fetch("/data/eventData.json") // Adjust the path as needed for your project structure
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw new Error(`HTTP error! Status: ${response.status}`);
+    //     }
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     const foundEvent = data.events.find(
+    //       (e) => e.id === parseInt(eventId, 10)
+    //     );
+    //     setEvent(foundEvent);
+    //     setLoading(false);
+    //   })
+    //   .catch((err) => {
+    //     setError(err.message);
+    //     setLoading(false);
+    //   });
+
+    fetchEvents().then(result => {
+      const foundEvent = result.find((e) => e.id === eventId);
+      setEvent(foundEvent);
+      setLoading(false);
+    }).catch((error) => {
+      setError(error.message);
+      setLoading(false);
+    })
   }, [eventId]);
 
   if (loading) {

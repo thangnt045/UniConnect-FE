@@ -1,9 +1,9 @@
 const API_URL = "http://localhost:5000/events";
 
-// Fetch all events ( Này Ví Dụ Nên Bỏ cx đc)
+// Fetch all events
 export const fetchEvents = async () => {
-  const response = await fetch(API_URL);
-  return response.json();
+  const response = await fetch(API_URL)
+  return response.json()
 };
 
 // Update an event

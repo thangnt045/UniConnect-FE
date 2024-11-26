@@ -1,0 +1,12 @@
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* .sidebar {
+    flex: 1;
+}
+
+.edit-event {
+    flex: 4;
+} */

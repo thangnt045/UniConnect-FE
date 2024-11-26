@@ -1,7 +1,35 @@
 import React from "react";
 import { useState } from "react";
-import EventList from "./EventList";
 import "../styles/EventListSection.css"
+import "../styles/EventCard.css"
+import "../styles/EventList.css"
+
+const EventCard = ({ name }) => {
+  return (
+      <div className="event-card">
+          <div className="image-placeholder"></div>
+          <div className="event-info">
+              <h3>{name}</h3>
+              <button className="view-details-button">View Details</button>
+          </div>
+      </div>
+  )
+}
+
+const EventList = ({events, page}) => {
+
+  const itemsPerPage = 6
+  const startIndex = (page - 1) * itemsPerPage;
+  const visibleEvents = events.slice(startIndex, startIndex + itemsPerPage)
+
+  return (
+      <div className="event-list">
+          {visibleEvents.map((event) => (
+              <EventCard name={event.name} />
+          ))}
+      </div>
+  )
+}
 
 function EventListSection() {
   // State to hold event data
