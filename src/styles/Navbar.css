@@ -1,9 +1,10 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 15px;
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space out elements (logo, links, search+sign-in) */
+  align-items: center; /* Vertically center items */
+  padding: 10px 20px;
+  background-color: rgba(230, 228, 228, 0.9); /* Slight transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .navbar-logo img {
@@ -13,6 +14,8 @@
 
 .navbar-links {
   display: flex;
+  gap: 20px; /* Space between links */
+  text-transform: uppercase;
   list-style: none;
 }
 
@@ -23,30 +26,89 @@
 .navbar-links a {
   color: #c9302c;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .navbar-links a:hover {
   color: #ff5670;
-}
-
-.navbar-search-signin {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Space between search and button */
+  transform: scale(12.05);
 }
 
 .navbar-search {
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  width: 200px;
+  position: relative;
+}
+
+.navbar-search-signin {
+  display: flex; /* Group search bar and button */
+  align-items: center;
+  gap: 10px; /* Space between search bar and button */
+}
+
+.navbar-search-input {
+  width: 250px; /* Adjust width for proper alignment */
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-search-input:focus {
+  border-color: #c9302c;
+  box-shadow: 0 0 5px rgba(201, 48, 44, 0.5);
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%; /* Position the dropdown right below the search bar */
+  left: 0;
+  width: 100%; /* Match the search bar width */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px; /* Add a scrollable height limit */
+  overflow-y: auto; /* Enable scrolling for long lists */
+  padding: 8px 0;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+}
+
+.suggestion-item:hover {
+  background-color: #f9f9f9;
+  color: #c9302c; /* Highlight color on hover */
+}
+
+.no-suggestions {
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  color: #888;
 }
 
 .navbar-search:focus {
-  border-color: #bb2a3f;
+  border-color: #86091b;
   outline: none;
   box-shadow: 0 0 5px rgba(251, 113, 133, 0.5);
 }
@@ -59,8 +121,10 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
 
 .signin-button:hover {
   background-color: #ff5670;
+  transform: scale(1.05);
 }

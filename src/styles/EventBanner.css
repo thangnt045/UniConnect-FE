@@ -40,3 +40,12 @@
     font-size: 1.8rem;
   }
 }
+
+.event-banner-description {
+  font-size: 1.5rem;
+  line-height: 2.5;
+  word-spacing: 0.1rem;
+  margin: 15px; /* Add spacing around the description */
+  text-align: justify;
+  text-justify: inter-word;
+}

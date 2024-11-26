@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
-import { GetImage } from "../utils/GetImage";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchQuery, setSelectedEvent } from "../redux/actions";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const searchQuery = useSelector((state) => state.searchQuery);
+  const filteredEvents = useSelector((state) =>
+    state.allEvents.filter((event) =>
+      event.title.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const handleSearch = (e) => {
+    const query = e.target.value;
+    dispatch(setSearchQuery(query));
+    setShowSuggestions(query.length > 0); // Show dropdown if query is not empty
+  };
+
+  const clearSearch = () => {
+    dispatch(setSearchQuery(""));
+    setShowSuggestions(false); // Hide dropdown
+  };
+
+  const handleEventClick = (event) => {
+    dispatch(setSelectedEvent(event)); // Set selected event in Redux
+    setShowSuggestions(false); // Hide dropdown
+    clearSearch(); // Optionally clear search
+    navigate(`/event/${event.id}`); // Navigate to event detail page
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <GetImage
-          image={"app_icon"}
-          alt="app_logo"
-          size={{ width: 30, height: 20 }}
+        <img
+          src="/assets/images/app_icon.png"
+          alt="app logo"
+          style={{ width: 30, height: 20 }}
         />
       </div>
       <ul className="navbar-links">
@@ -26,14 +56,38 @@ const Navbar = () => {
           <a href="#4">Sự Kiện Của Tôi</a>
         </li>
       </ul>
-      <div className="navbar-search-signin">
+      <div className="navbar-search">
         <input
           type="text"
-          className="navbar-search"
+          value={searchQuery}
+          onChange={handleSearch}
           placeholder="Tìm kiếm sự kiện..."
+          className="navbar-search-input"
         />
-        <button className="signin-button">Đăng Nhập</button>
+        {searchQuery && (
+          <button onClick={clearSearch} className="clear-button">
+            X
+          </button>
+        )}
+        {showSuggestions && (
+          <div className="search-suggestions">
+            {filteredEvents.length > 0 ? (
+              filteredEvents.map((event) => (
+                <div
+                  key={event.id}
+                  className="suggestion-item"
+                  onClick={() => handleEventClick(event)} // Handle click
+                >
+                  <p>{event.title}</p>
+                </div>
+              ))
+            ) : (
+              <div className="no-suggestions">No events found</div>
+            )}
+          </div>
+        )}
       </div>
+      <button className="signin-button">Đăng Nhập</button>
     </nav>
   );
 };
