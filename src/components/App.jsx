@@ -1,16 +1,12 @@
 import React from "react";
-import Home from "../pages/EditEven";
-import DetailedEvent from "../pages/DetailedEvent";
-import Registration from "./Registration";
+import Event from "../pages/Event";
 
-function App() {
+const App = () => {
   return (
     <div>
-      <div>
-        <Home/>
-      </div>
+      <Event />
     </div>
   );
-}
+};
 
 export default App;
