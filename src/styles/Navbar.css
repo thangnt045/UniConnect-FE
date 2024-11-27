@@ -2,7 +2,7 @@
   display: flex; /* Use flexbox for horizontal alignment */
   justify-content: space-between; /* Space out elements (logo, links, search+sign-in) */
   align-items: center; /* Vertically center items */
-  padding: 10px 20px;
+  padding: 10px 0px;
   background-color: rgba(230, 228, 228, 0.9); /* Slight transparency */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   top: 0;
@@ -12,6 +12,7 @@
 .navbar-logo img {
   width: 50px;
   height: 40px;
+  margin: 0px 10px
 }
 
 .navbar-links {
@@ -124,6 +125,7 @@
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
+  margin: 0px 10px;
 }
 
 .signin-button:hover {

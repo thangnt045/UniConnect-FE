@@ -7,6 +7,7 @@ import DetailedEvent from "../pages/DetailedEvent";
 import EditEvent from "../pages/Event";
 import { fetchEvents } from "../fetchAPI/api";
 import "../styles/App.css"
+import AddEvent from "../pages/AddEvent";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/events/:id" element={<DetailedEvent />} />
         <Route path="/events" element={<EditEvent />} />
+        <Route path="/events/new" element={<AddEvent />} />
       </Routes>
     </Router>
   );

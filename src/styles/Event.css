@@ -3,6 +3,10 @@
     grid-template-columns: 1fr 4fr;
 }
 
+.edit-event-container {
+    width: 100%;
+}
+
 /* .sidebar {
     flex: 1;
 }

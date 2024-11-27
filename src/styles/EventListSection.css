@@ -76,5 +76,6 @@ select {
 
 .event-list-container {
   display: flex;
+  gap: 5%;
   margin: 20px 20px 20px 20px;
 }
