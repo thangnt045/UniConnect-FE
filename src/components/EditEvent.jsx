@@ -17,6 +17,7 @@ const EditEvent = ({ event, onSave, onCancel }) => {
       ticketsLeft,
       description,
     });
+    alert("Thay đổi thành công!")
   };
 
   return (

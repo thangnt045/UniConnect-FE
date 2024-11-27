@@ -10,7 +10,7 @@ const BannerComponent = () => {
     <div className="banner">
       <img
         className="banner-image"
-        src="https://scontent.fsgn1-1.fna.fbcdn.net/v/t39.30808-6/438197818_456883800188156_2414080979367776266_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=HnRzJeseKE4Q7kNvgH0Mlqt&_nc_ht=scontent.fsgn1-1.fna&_nc_gid=APfbR0j5gbUzHuXnNbRK5RG&oh=00_AYCu7jZcARu7uE8iadPcAgsaVZK496nO61_p8aiej1keYw&oe=670BC718"
+        src="https://fastly.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4"
         alt="Orientation Day 2024"
       />
       <div className="banner-overlay">

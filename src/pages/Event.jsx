@@ -49,7 +49,7 @@ const Event = () => {
             className="edit-event"
           />
         ) : (
-          <div>
+          <div className="dashboard-event-list">
             <button onClick={handleNew} className="new-event-button">
             Tạo
             </button>

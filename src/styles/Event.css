@@ -1,13 +1,19 @@
 .dashboard-content {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    height: 60em;
 }
 
 .edit-event-container {
     width: 100%;
 }
 
+.dashboard-event-list {
+    overflow-y: scroll;
+}
+
 .new-event-button {
+    margin-top: 20px;
     padding: 10px 20px;
     background: #28a745;
     color: white;

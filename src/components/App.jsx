@@ -13,15 +13,6 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // fetch("../data/EventData.json")
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log("Fetched Data:", data);
-    //     console.log(fetchEvents().then())
-    //     dispatch(setAllEvents(data.events));
-    //   })
-    //   .catch((error) => console.error("Error loading events:", error));
-
     fetchEvents().then(result => {
       dispatch(setAllEvents(result));
     })
