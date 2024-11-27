@@ -7,22 +7,40 @@ const AddEventForm = () => {
     const navigate = useNavigate()
 
     const [formData, setFormData] = useState({
-        eventName: "",
-        startDate: "",
+        title: "",
+        datetime: "",
         location: "",
         tickets: "",
+        ticketsLeft: "",
         description: "",
     });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault()
-        addEvent(formData)
+
+        // Check for empty or null values in formData
+        const hasEmptyField = Object.values(formData).some(
+            (value) => value === null || value === ""
+        );
+
+        if (hasEmptyField) {
+            alert("Vui lòng không để trống các thông tin.");
+        } else {
+            addEvent(formData)
+            alert("Sự kiện đã được tạo thành công.")
+            navigate("/events")
+        }
     }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        if (name === "tickets") {
+            setFormData({...formData, "tickets": value, "ticketsLeft": value})
+        } else {
+            setFormData({ ...formData,[name]: value });
+        }
+        
+    };
 
     return (
         <div className="event-form">
@@ -41,7 +59,7 @@ const AddEventForm = () => {
                 <label>Tên sự kiện</label>
                 <input
                 type="text"
-                name="eventName"
+                name="title"
                 value={formData.eventName}
                 onChange={handleChange}
                 placeholder="Tên sự kiện"
@@ -51,7 +69,7 @@ const AddEventForm = () => {
                 <label>Ngày bắt đầu</label>
                 <input
                 type="date"
-                name="startDate"
+                name="datetime"
                 value={formData.startDate}
                 onChange={handleChange}
                 />

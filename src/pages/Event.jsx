@@ -6,11 +6,12 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Sidebar from "../components/Sidebar";
 import "../styles/Event.css"
+import { useNavigate } from "react-router-dom";
 
 const Event = () => {
   const [events, setEvents] = useState([]);
   const [editingEvent, setEditingEvent] = useState(null);
-
+  const navigate = useNavigate()
   
   useEffect(() => {
     fetchEvents().then(setEvents);
@@ -20,6 +21,10 @@ const Event = () => {
   const handleEdit = (event) => {
     setEditingEvent(event);
   };
+
+  const handleNew = () => {
+    navigate("/events/new")
+  }
 
   
   const handleSave = async (updatedEvent) => {
@@ -44,7 +49,12 @@ const Event = () => {
             className="edit-event"
           />
         ) : (
-          <EventsDataList className="edit-event" events={events} onEdit={handleEdit} />
+          <div>
+            <button onClick={handleNew} className="new-event-button">
+            Tạo
+            </button>
+            <EventsDataList className="edit-event" events={events} onEdit={handleEdit} />
+          </div>
         )}
       </div>
 

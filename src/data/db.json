@@ -32,14 +32,6 @@
       "ticketsLeft": "35",
       "description": "Kết nối doanh nghiệp và các nhà đầu tư tiềm năng.",
       "image": "https://example.com/image3.jpg"
-    },
-    {
-      "id": 4,
-      "eventName": "Sự kiện 1",
-      "startDate": "2024-11-29",
-      "location": "Đại học Văn Lang cơ sở 3",
-      "tickets": "200",
-      "description": "Sự kiện ví dụ"
     }
   ]
 }
