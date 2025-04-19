@@ -16,7 +16,11 @@ UniConnect is a full-stack web application that serves as a digital hub for univ
 - **Frontend Framework**: React 18
 - **State Management**: Redux Toolkit
 - **Routing**: React Router v7
-- **API Integration**: Custom fetchAPI implementation
+- **API Integration**:
+  - Custom fetchAPI implementation for RESTful endpoints
+  - JSON-server for mock API development (port 5000)
+  - Concurrent server setup for seamless development
+  - Simulated CRUD operations with persistent data storage
 - **Development Tools**:
   - Concurrent development server
   - JSON Server for mock API
